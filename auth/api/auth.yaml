@@ -1,0 +1,8 @@
+type: goolge.api.Service
+config_version: 3
+
+http:
+  rules:
+    - selector: auth.api.v1.AuthService.Login
+      post: /v1/auth/login
+      body: '*'
