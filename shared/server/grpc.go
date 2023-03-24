@@ -17,8 +17,6 @@ type GrpcConfig struct {
 }
 
 func RunGrpcServer(c *GrpcConfig) error {
-	// dsn := "root:testtest@tcp(127.0.0.1:3306)/coolcar?charset=utf8mb4&parseTime=True&loc=Local"
-	// db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
 	listener, err := net.Listen("tcp", c.Addr)
 
 	if err != nil {
